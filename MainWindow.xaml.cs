@@ -19,6 +19,7 @@ namespace pt2022 {
             InitializeComponent();
             //Zsemle
             //Maci
+            //Az én commitom a legjobb!(a jobb ádám)
         }
     }
 }
