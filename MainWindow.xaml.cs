@@ -18,6 +18,7 @@ namespace pt2022 {
         public MainWindow() {
             InitializeComponent();
             //Zsemle
+            //Maci
         }
     }
 }
