@@ -7,6 +7,30 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <TabControl x:Name="tc_nav" TabStripPlacement="Left" SelectionChanged="TabControl_SelectionChanged">
+            <TabItem Name="ti_games" Header="Games">
+                <TabItem.Content>
+                    <TextBlock TextWrapping="WrapWithOverflow">
+        Games
+                    </TextBlock>
+                </TabItem.Content>
+            </TabItem>
+
+            <TabItem Name="ti_user" Header="User">
+                <TabItem.Content>
+                    <TextBlock TextWrapping="WrapWithOverflow">
+        User
+                    </TextBlock>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Name="ti_form" Header="My Form">
+                <TabItem.Content>
+                    <TextBlock TextWrapping="WrapWithOverflow">
+        Form
+                    </TextBlock>
+                </TabItem.Content>
+            </TabItem>
+        </TabControl>
+
     </Grid>
 </Window>

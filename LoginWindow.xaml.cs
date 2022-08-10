@@ -34,7 +34,7 @@ namespace pt2022 {
 
         private bool Login() {
             //TODO send api call
-            return false;
+            return true;
         }
     }
 }

@@ -17,9 +17,10 @@ namespace pt2022 {
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
-            //Zsemle
-            //Maci
-            //Az én commitom a legjobb!(a jobb ádám)
+        }
+
+        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e) {
+            Title = "pt2022 | "+((TabItem) tc_nav.Items[tc_nav.SelectedIndex]).Header;
         }
     }
 }
