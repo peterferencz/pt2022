@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,12 @@ namespace pt2022 {
 
         private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e) {
             Title = "pt2022 | "+((TabItem) tc_nav.Items[tc_nav.SelectedIndex]).Header;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            TextBox t = W;
+            Process.Start("https://jellap.peopleteam.hu/jellap/show/" + t.Text);
         }
     }
 }
