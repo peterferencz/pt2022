@@ -19,10 +19,12 @@ namespace pt2022 {
     public partial class LoginWindow : Window {
         public LoginWindow() {
             InitializeComponent();
+            Database.Register("Admin", "123");
         }
 
         private void btn_login_Click(object sender, RoutedEventArgs e) {
-            if (Login()) {
+
+            if (Database.LogIn(tb_username.Text, tb_password.Text)) {
                 MainWindow main = new MainWindow();
                 main.Show();
                 Close();
@@ -30,11 +32,6 @@ namespace pt2022 {
                 l_error.Content = "Invalid Credentials";
             }
 
-        }
-
-        private bool Login() {
-            //TODO send api call
-            return true;
         }
     }
 }
