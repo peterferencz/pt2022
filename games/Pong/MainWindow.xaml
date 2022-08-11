@@ -1,0 +1,19 @@
+﻿<Window x:Class="Pong.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pong"
+        mc:Ignorable="d"
+        Title="Pong" Height="450" Width="800"
+        Keyboard.PreviewKeyDown="Window_PreviewKeyDown"
+        Keyboard.PreviewKeyUp="Window_PreviewKeyUp">
+    <Grid Background="Black">
+        <Label Name="lbl_score" Foreground="White" Content="0 : 0" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Rectangle x:Name="paddleLeft" HorizontalAlignment="Left" Height="100" Margin="20,20,0,0" VerticalAlignment="Top" Width="20" Fill="Blue" Stroke="White" StrokeThickness="3"/>
+        <Rectangle x:Name="paddleRight" HorizontalAlignment="Right" Height="100" Margin="0,20,20,0" VerticalAlignment="Top" Width="20" Fill="Red" Stroke="White" StrokeThickness="3"/>
+        <Rectangle x:Name="ball" HorizontalAlignment="Left" Height="10" Margin="395,220,0,0" VerticalAlignment="Top" Width="10" Fill="White" Stroke="White" StrokeThickness="2"/>
+        <CheckBox x:Name="cb_multiplayer" Checked="MultiplayerToggled" Unchecked="MultiplayerToggled" Content="Multiplayer" Foreground="White" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
