@@ -75,8 +75,10 @@
                 }
                 if (aktuálisjátékos == 1)
                 {
-                    Console.ForegroundColor= ConsoleColor.Red;
-                }else if (aktuálisjátékos == 2){
+                    Console.ForegroundColor = ConsoleColor.Red;
+                }
+                else if (aktuálisjátékos == 2)
+                {
 
                     Console.ForegroundColor = ConsoleColor.Yellow;
                 }
@@ -95,29 +97,46 @@
                 Console.ForegroundColor = ConsoleColor.White;
                 if (aktuálisjátékos == 1)
                 {
-                    hejek[pos1] = 0; // 
+                    hejek[pos1] = 0;
                     pos1 = pos1 + dobás;
-                    
+
                 }
                 else if (aktuálisjátékos == 2)
                 {
-                    hejek[pos2] = 0; // 
+                    hejek[pos2] = 0;
                     pos2 = pos2 + dobás;
                 }
                 else if (aktuálisjátékos == 3)
                 {
-                    hejek[pos3] = 0; // 
+                    hejek[pos3] = 0;
                     pos3 = pos3 + dobás;
                 }
                 else if (aktuálisjátékos == 4)
                 {
-                    hejek[pos4] = 0; // 
+                    hejek[pos4] = 0;
                     pos4 = pos4 + dobás;
                 }
 
                 if (pos1 < 100)
                 {
+                    if (hejek[pos1] != 1 && hejek[pos1] != 0)
+                    {
+                        if (hejek[pos1] == 2)
+                        {
+                            pos2 = 0;
+
+                        }
+                        else if (hejek[pos1] == 3)
+                        {
+                            pos3 = 0;
+                        }
+                        else if (hejek[pos1] == 4)
+                        {
+                            pos4 = 0;
+                        }
+                    }
                     hejek[pos1] = 1;
+
                 }
                 else
                 {
@@ -126,6 +145,22 @@
                 }
                 if (pos2 < 100)
                 {
+                    if (hejek[pos2] != 2 && hejek[pos2] != 0)
+                    {
+                        if (hejek[pos2] == 1)
+                        {
+                            pos1 = 0;
+
+                        }
+                        else if (hejek[pos1] == 3)
+                        {
+                            pos3 = 0;
+                        }
+                        else if (hejek[pos2] == 4)
+                        {
+                            pos4 = 0;
+                        }
+                    }
                     hejek[pos2] = 2;
                 }
                 else
@@ -135,6 +170,22 @@
                 }
                 if (pos3 < 100)
                 {
+                    if (hejek[pos3] != 3 && hejek[pos1] != 0)
+                    {
+                        if (hejek[pos3] == 1)
+                        {
+                            pos1 = 0;
+
+                        }
+                        else if (hejek[pos3] == 2)
+                        {
+                            pos2 = 0;
+                        }
+                        else if (hejek[pos3] == 4)
+                        {
+                            pos4 = 0;
+                        }
+                    }
                     hejek[pos3] = 3;
                 }
                 else
@@ -145,6 +196,22 @@
                 if (pos4 < 100)
                 {
                     hejek[pos4] = 4;
+                    if (hejek[pos4] != 4 && hejek[pos4] != 0)
+                    {
+                        if (hejek[pos4] == 1)
+                        {
+                            pos1 = 0;
+
+                        }
+                        else if (hejek[pos4] == 2)
+                        {
+                            pos2 = 0;
+                        }
+                        else if (hejek[pos4] == 3)
+                        {
+                            pos3 = 0;
+                        }
+                    }
                 }
                 else
                 {
