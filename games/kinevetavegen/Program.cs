@@ -20,12 +20,12 @@
             {
                 for (int n = 0; n < 10; n++)
                 {
-                    hejek[i] = 0;
+                    hejek[i] = 0; // nullára rakja alapbola az öszes hejet
 
                 }
 
             }
-            hejek[pos1] = 1;
+            
             while (megy)
             {
 
@@ -42,7 +42,7 @@
                     else if (hejek[i] == 1)
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.Write(" O");
+                        Console.Write(" O");                                    // külön színnel irja ki az öszeset
                         Console.ForegroundColor = ConsoleColor.White;
                     }
                     else if (hejek[i] == 2)
@@ -80,7 +80,7 @@
                 else if (aktuálisjátékos == 2)
                 {
 
-                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.ForegroundColor = ConsoleColor.Yellow;    //beszinezi a dobás dialouget
                 }
                 else if (aktuálisjátékos == 3)
                 {
@@ -93,12 +93,12 @@
                 Console.WriteLine("nyomd le az entert " + aktuálisjátékos + " játékos");
                 Console.ReadLine();
                 int dobás = rnd.Next(1, 7);
-                Console.WriteLine("enyit dobtál:" + dobás);
+                Console.WriteLine("enyit dobtál:" + dobás);           // dob
                 Console.ForegroundColor = ConsoleColor.White;
                 if (aktuálisjátékos == 1)
                 {
                     hejek[pos1] = 0;
-                    pos1 = pos1 + dobás;
+                    pos1 = pos1 + dobás; //berakja a dobott hejre a játékost
 
                 }
                 else if (aktuálisjátékos == 2)
@@ -119,7 +119,7 @@
 
                 if (pos1 < 100)
                 {
-                    if (hejek[pos1] != 1 && hejek[pos1] != 0)
+                    if (hejek[pos1] != 1 && hejek[pos1] != 0) // kiütés
                     {
                         if (hejek[pos1] == 2)
                         {
@@ -220,7 +220,7 @@
                 }
                 Console.ReadLine();
                 Console.Clear();
-                if (aktuálisjátékos != 4)
+                if (aktuálisjátékos != 4) // nyertes játékok kiirása
                 {
                     aktuálisjátékos++;
                 }
