@@ -25,12 +25,12 @@
             </TabItem>
             <TabItem Name="ti_form" Header="My Form">
                 <TabItem.Content>
-                    <TextBlock TextWrapping="WrapWithOverflow">
-        Form
-                    </TextBlock>
+                    <Grid>
+                        <Button Click="Button_Click" Width="400" Height="20">asdf</Button>
+                        <TextBox Width="200" Height="20" Name="W"></TextBox>
+                    </Grid>
                 </TabItem.Content>
             </TabItem>
         </TabControl>
-
     </Grid>
 </Window>
